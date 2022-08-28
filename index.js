@@ -1,33 +1,51 @@
-let numero = parseInt(prompt("Ingrese un numero"));
+//Realizando suma
+
+let numeros = parseInt(prompt("Ingrese un numero"));
 
 for( let i = 0; i <= 15; i++){
-    let suma = numero + i;
-    let salida = `${numero} + ${i} = ${suma}`;
+    let suma = numeros + i;
+    let salida = `${numeros} + ${i} = ${suma}`;
 
-    alert(salida)
+    alert(salida);
 }
+
+//Ingresando a un sitio mediante el nombre asignado
 
 let entrada = prompt("Ingresar un nombre").toUpperCase();
 
 while(entrada != "ESC" ){
     switch (entrada) { 
         case "NATALY":
-            alert("HOLA NATALY");
+            alert("BIENVENIDA NATALY");
             break;
         case "CARLOS":
-            alert("HOLA CARLOS");
+            alert("BIENVENIDO CARLOS");
             break;
         case "JUAN":
-            alert("HOLA JUAN");
+            alert("BIENVENIDO JUAN");
                 break;
         default:
-                alert("¿QUIÉN SOS?")
+                alert("NO ESTAS EN LA LISTA")
                 break;
     }
-    entrada = prompt("Ingresar un nombre");
+    entrada = prompt("Ingresar un nombre").toUpperCase();
 }
 
-alert("Excelente!!!");
+/*Mediante el ingreso de numeros se genera un texto "Hola" 
+de form repetida segun la cantidad de veces ingrasada*/
+
+let numero = parseInt(prompt("Ingrese un numero"));
+
+while(numero != "ESC"){
+    if(numero === numero) {
+        alert (`Hola`);
+    }else{ 
+        alert (`Solo ingresar numero`);
+        numero = parseInt(prompt("Ingrese un numero"));
+    }
+    alert(`Hola`);
+    numero = parseInt(prompt("Ingrese un numero"));  
+}
 
 
 
