@@ -4,9 +4,7 @@ let seleccionarProductos = Number(prompt( "1-remera $850 2-jean $2500 3-calzado 
 let seleccionarCantidad;
 let total = 0;
 
-const cantidad = (cant, precio) => {
-    return cant * precio
-}
+
 
 while (seleccionarProductos != 0){
     switch (seleccionarProductos) {
@@ -33,7 +31,9 @@ while (seleccionarProductos != 0){
     seleccionarProductos = Number(prompt( "1-remera $850 2-jean $2500 3-calzado $3500 4-campera $3700 "))
 }
 
-
+const cantidad = (cant, precio) => {
+    return cant * precio
+}
 
 
 alert("el total de la compra es de: " + total);
