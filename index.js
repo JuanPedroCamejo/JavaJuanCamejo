@@ -1,51 +1,41 @@
-//Realizando suma
 
-let numeros = parseInt(prompt("Ingrese un numero"));
+alert("Ingrese la opcion del producto que desea llevar, para salir ingrese 0");
+let seleccionarProductos = Number(prompt( "1-remera $850 2-jean $2500 3-calzado $3500 4-campera $3700 "));
+let seleccionarCantidad;
+let total = 0;
 
-for( let i = 0; i <= 15; i++){
-    let suma = numeros + i;
-    let salida = `${numeros} + ${i} = ${suma}`;
-
-    alert(salida);
+const cantidad = (cant, precio) => {
+    return cant * precio
 }
 
-//Ingresando a un sitio mediante el nombre asignado
-
-let entrada = prompt("Ingresar un nombre").toUpperCase();
-
-while(entrada != "ESC" ){
-    switch (entrada) { 
-        case "NATALY":
-            alert("BIENVENIDA NATALY");
+while (seleccionarProductos != 0){
+    switch (seleccionarProductos) {
+        case "1":
+            seleccionarCantidad= Number(prompt("el producto seleccionado es remera, indique la cantidad"))
+            total += cantidad(seleccionarCantidad, 850)
             break;
-        case "CARLOS":
-            alert("BIENVENIDO CARLOS");
+        case "2":
+            seleccionarCantidad = Number(prompt("el producto seleccionado es jean, indique la cantidad"))
+            total += cantidad(seleccionarCantidad, 2500)
             break;
-        case "JUAN":
-            alert("BIENVENIDO JUAN");
-                break;
+        case "3":
+            seleccionarCantidad = Number(prompt("el producto seleccionado es calzado, indique la cantidad"))
+            total += cantidad(seleccionarCantidad, 3500)
+            break;
+        case "4":
+            seleccionarCantidad = Number(prompt("el producto seleccionado es campera, indique la cantidad"))
+            total += cantidad(seleccionarCantidad, 3700)
+            break;
+            
         default:
-                alert("NO ESTAS EN LA LISTA")
-                break;
+            break;
     }
-    entrada = prompt("Ingresar un nombre").toUpperCase();
+    seleccionarProductos = Number(prompt( "1-remera $850 2-jean $2500 3-calzado $3500 4-campera $3700 "))
 }
 
-/*Mediante el ingreso de numeros se genera un texto "Hola" 
-de form repetida segun la cantidad de veces ingrasada*/
 
-let numero = parseInt(prompt("Ingrese un numero"));
 
-while(numero != "ESC"){
-    if(numero === numero) {
-        alert (`Hola`);
-    }else{ 
-        alert (`Solo ingresar numero`);
-        numero = parseInt(prompt("Ingrese un numero"));
-    }
-    alert(`Hola`);
-    numero = parseInt(prompt("Ingrese un numero"));  
-}
 
+alert("el total de la compra es de: " + total);
 
 
