@@ -77,8 +77,12 @@ const productos = [
     new Producto(4, "zapatillas", 6000),
 ];
 
+let nombre = prompt("Ingrese el nombre del producto");
+let producto = productos.find(item => item.nombre === nombre);
 
+let mensaje = `El producto ${nombre} tiene un precio de ${producto.precio}`;
+alert(mensaje);
 
-for(const item of productos){
+/*for(const item of productos){
 console.log(item);
-}
+}*/
