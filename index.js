@@ -1,4 +1,4 @@
-alert("Ingrese la opcion del producto que desea llevar, para salir ingrese 0")
+/*alert("Ingrese la opcion del producto que desea llevar, para salir ingrese 0")
 let seleccionarProductos = Number(prompt( "1-buzo $3000 2-remera $1500 3-jean $5000 4-Zapatillas $6000 "))
 let seleccionarCantidad;
 let total = 0;
@@ -60,5 +60,25 @@ if (metodo == "tarjeta") {
 
 }
 
-metodoDePago()
+metodoDePago()*/
 
+class Producto{
+    constructor(id, nombre, precio){
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+}
+
+const productos = [
+    new Producto(1, "buzo", 3000),
+    new Producto(2, "remera", 1500),
+    new Producto(3, "jean", 5000),
+    new Producto(4, "zapatillas", 6000),
+];
+
+
+
+for(const item of productos){
+console.log(item);
+}
