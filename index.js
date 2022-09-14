@@ -116,16 +116,7 @@ if (metodo == "tarjeta") {
 
 metodoDePago()
 
-/*Transformando el arreglo debido a la incorporacion del IVA 
-en el precio del producto*/
 
-let nuevosProductos = productos.map(item => {
-    return {
-        id: item.id,
-        nombre: item.nombre,
-        precio: item.precio + item.precio * 0.21
-    }
-})
 
 
 
