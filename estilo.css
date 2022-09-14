@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blanchedalmond;
+
+}
+
+h1{
+    color: blue;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h4{
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
