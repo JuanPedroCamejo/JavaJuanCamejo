@@ -106,3 +106,12 @@ const actualizarCarrito = () => {
     
 
 }
+
+Swal.fire({
+    title: 'ADIDAS!',
+    text: 'Expresando tu estilo.',
+    imageUrl: 'https://i.pinimg.com/originals/41/ca/4b/41ca4b80bab9e9bdb26c25abec46b960.jpg',
+    imageWidth: 300,
+    imageHeight: 400,
+    imageAlt: 'Custom image',
+})
