@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online</title>
+    <title>ADIDAS</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet icon" href="./Imagenes/adidas_folder_file_10441.png">
 </head>
 <body>
+    <div class="contenedor">
     <header>
         <h1 id="titulo" class="titulo">ADIDAS</h1>
         <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
@@ -24,9 +27,60 @@
         <option value="S">Small</option>
     </select>
 
+    <ul>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="bi bi-facebook"></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="bi bi-twitter"></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="bi bi-instagram"></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="bi bi-whatsapp"></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="bi bi-linkedin"></span>
+            </a>
+        </li> 
+    </ul>
 
     <main id="contenedor-productos">
-
+        
     </main>
 
     <div class="modal-contenedor">
@@ -46,13 +100,26 @@
     </div>
 
     <footer>
+        <div id="wg-api-football-game"
+        data-host="v3.football.api-sports.io"
+        data-key="301f393445e8bd9e37a982eee3c5460d"
+        data-id="718243"
+        data-theme=""
+        data-refresh="15"
+        data-show-errors="false"
+        data-show-logos="true">
+        </div>
+        
+    
         <h4>Pagina creada por Juan Camejo</h4>
         <p>Correo electronico: juancamejo@hotmail.com</p>
     </footer>
+    <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="stock.js"></script>
     <script defer src="modal.js"></script>
     <script defer src="app.js"></script>
+</div>
 </body>
 </html>
