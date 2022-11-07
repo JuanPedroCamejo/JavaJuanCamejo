@@ -118,7 +118,7 @@ Swal.fire({
 
 const cargarProductos = async() => {
     try{
-        const respuesta = await fetch(`https://jsonplaceholder.typicode.com/todos/1`);
+        const respuesta = await fetch(`./data.json`);
 
         console.log(respuesta);
 
@@ -142,7 +142,7 @@ cargarProductos();
 
 let contenedor = document.getElementById("contenedor");
 
-fetch("./data.json")
+fetch(`./data.json`)
 .then(response => response.json())
 .then(data => console.log(data));
 
