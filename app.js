@@ -145,3 +145,27 @@ let contenedor = document.getElementById("contenedor");
 fetch("./data.json")
 .then(response => response.json())
 .then(data => console.log(data));
+
+
+const tabla = document.querySelector('#lista-productos tbody');
+
+function listaProductos() {
+    fetch(`./data.json`)
+        .then(respuesta => respuesta.json()) //Indicamos el formato en que se desea obtener la información
+        .then(data => {
+            data.forEach(productos => {
+                const row = document.createElement('tr');
+                row.innerHTML += `
+                    <td>${productos.id}</td>
+                    <td>${productos.nombre}</td>
+                    <td>${productos.precio}</td>
+                    <td>${productos.talle}</td>
+                `;
+                tabla.appendChild(row);
+            });
+
+        }) // Aquí mostramos dicha información
+        .catch(error => console.log('Hubo un error : ' + error.message))
+}
+
+listaProductos();

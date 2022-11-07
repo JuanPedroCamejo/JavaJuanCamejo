@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilo.css">
     <link rel="stylesheet icon" href="./Imagenes/adidas_folder_file_10441.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div class="contenedor">
@@ -99,6 +101,28 @@
         </div>
     </div>
 
+    <div class="containerDos">
+        <div class="row mt-3">
+            <div class="col">
+                <h2>LISTADO DE PRODUCTOS EN STOCK</h2>
+                <div class="my-3">
+                    <table class="table" id="lista-productos">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">PRECIO</th>
+                                <th scope="col">TALLE DISPONIBLE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div id="wg-api-football-game"
         data-host="v3.football.api-sports.io"
@@ -113,6 +137,8 @@
     
         <h4>Pagina creada por Juan Camejo</h4>
         <p>Correo electronico: juancamejo@hotmail.com</p>
+
+        
     </footer>
     <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -120,6 +146,19 @@
     <script defer src="stock.js"></script>
     <script defer src="modal.js"></script>
     <script defer src="app.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
 </div>
 </body>
 </html>
