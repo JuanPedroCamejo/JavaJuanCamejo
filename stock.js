@@ -1,4 +1,4 @@
-let stockProductos = [
+/*let stockProductos = [
     {id: 1, nombre: "Buzo", tipo: "buzo", cantidad: 1, desc: "Un buzo a tu estilo", precio: 3000, talle: "L", img: './Imagenes/buzo.jpg'},
     {id: 2, nombre: "Remera", tipo: "remera", cantidad: 1, desc: "Una remera con tu estilo", precio: 1500, talle: "L", img: './Imagenes/remera.webp'},
     {id: 3, nombre: "Jean", tipo: "jean", cantidad: 1, desc: "Un jean que re va con vos", precio: 5000, talle: "M", img: './Imagenes/jean.jpg'},
@@ -11,4 +11,4 @@ let stockProductos = [
     {id: 10, nombre: "Campera femenina gris", tipo: "Campera femenina", cantidad: 1, desc: "Te acompaña a todos lados", precio: 2500, talle: "M", img: './Imagenes/camperafemeninagris.jpg'},
     {id: 11, nombre: "Campera femenina neopreno", tipo: "Campera", cantidad: 1, desc: "Te acompaña a todos lados", precio: 3600, talle: "M", img: './Imagenes/camperafemeninaneopreno.jpg'},
     {id: 12, nombre: "Pantalon deportivo hombre", tipo: "Pantalon deportvo", cantidad: 1, desc: "Todo en deporte", precio: 2500, talle: "M", img: './Imagenes/pantalonhombre.jpg'},
-]
+]*/
