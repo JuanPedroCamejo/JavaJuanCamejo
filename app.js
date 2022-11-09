@@ -1,4 +1,4 @@
-const contenedorProductos = document.getElementById('contenedor-productos')
+/*const contenedorProductos = document.getElementById('contenedor-productos')*/
 
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 
@@ -11,22 +11,10 @@ const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
 
-let carrito = []
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        actualizarCarrito()
-    }
-})
-
-botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()
-})
 
 //INYECTANDO EL HTML
-stockProductos.forEach((producto) => {
+/*stockProductos.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('producto')
     div.innerHTML = `
@@ -47,7 +35,7 @@ stockProductos.forEach((producto) => {
         agregarAlCarrito(producto.id)
         
     })
-})
+})*/
 
 
 
@@ -64,7 +52,7 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     } else { 
-        const item = stockProductos.find((prod) => prod.id === prodId)
+        const item = nuevaCopia.find((prod) => prod.id === prodId)
         carrito.push(item)
     }
     
@@ -140,11 +128,64 @@ const cargarProductos = async() => {
 
 cargarProductos();
 
-let contenedor = document.getElementById("contenedor");
 
+
+let carrito = []
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
+
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito()
+})
+
+
+
+const contenedorProductos = document.getElementById('contenedor-productos')
+const contenedor = document.querySelector("contenedor-productos");
+
+function contenedorproductos() {
 fetch(`./data.json`)
-.then(response => response.json())
-.then(data => console.log(data));
+.then((respuesta) => respuesta.json())
+
+.then((data) => {
+    
+    data.forEach((producto) => {
+        let div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML = `
+        <img src=${producto.img} alt= "">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.desc}</p>
+        <p>Talle: ${producto.talle}</p>
+        <p class="precioProducto">Precio: ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        `;
+
+        
+
+
+        contenedorProductos.appendChild(div)
+
+        const boton = document.getElementById(`agregar${producto.id}`)
+
+    boton.addEventListener('click', () => {
+        //esta funcion ejecuta agregar carrito con la id del producto
+        agregarAlCarrito(producto.id)
+
+        
+    })
+})
+})
+}
+
+
+contenedorproductos();
 
 
 const tabla = document.querySelector('#lista-productos tbody');
@@ -162,6 +203,7 @@ function listaProductos() {
                     <td>${productos.talle}</td>
                 `;
                 tabla.appendChild(row);
+                
             });
 
         }) // Aquí mostramos dicha información
@@ -169,3 +211,16 @@ function listaProductos() {
 }
 
 listaProductos();
+
+let nuevaCopia;
+
+fetch(`./data.json`)
+.then(response => response.json())
+.then(data => {
+    nuevaCopia = [...data];
+
+    data.forEach(element => {
+
+    })
+    console.log("nueva copia", nuevaCopia);
+})
